@@ -13,12 +13,6 @@
 header {
   /* Defines in which area of the grid this item will be in */
   grid-area: header;
-
-  /* Defines the width of the header */
-  width: 80%;
-
-  /* Defines margins */
-  margin: 3.5rem auto;
 }
 
 #bg {

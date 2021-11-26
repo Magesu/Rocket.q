@@ -102,7 +102,7 @@ button,
   color: var(--white);
 
   /* Makes the transition from normal button to light button smooth */
-  transition: filter 0.2s;
+  transition: filter 0.2s, transform 0.2s;
 
   /* Turns cursor into pointer when it's on a button */
   cursor: pointer;
@@ -124,7 +124,9 @@ button > img,
 
 button:hover,
 .button:hover {
+  /* Animates buttons on hover */
   filter: brightness(1.2);
+  transform: translateY(-0.5rem);
 }
 
 .content header {
