@@ -1,0 +1,60 @@
+.content {
+  /* Defines the layout of this page with a grid */
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 11.4rem 1fr;
+
+  /* Sets the names for the grid areas */
+  grid-template-areas:
+    'header header'
+    'left   right';
+}
+
+header {
+  /* Defines in which area of the grid this item will be in */
+  grid-area: header;
+
+  /* Defines the width of the header */
+  width: 80%;
+
+  /* Defines margins */
+  margin: 3.5rem auto;
+}
+
+#bg {
+  /* Defines in which area of the grid this item will be in */
+  grid-area: left;
+
+  /* Sets the background image for this div */
+  background: url('/assets/home-bg-img.svg') no-repeat top left/contain;
+}
+
+main {
+  /* Defines in which area of the grid this item will be in */
+  grid-area: right;
+
+  /* Defines the layout of the main content with a flex box */
+  display: flex;
+  align-items: center;
+}
+
+main .container {
+  /* Sets the width of this container's size as either 100% or 363px if it's bigger than 363px */
+  width: min(36.3rem, 100%);
+}
+
+main h2 {
+  /* Sets the font */
+  color: var(--black);
+
+  /* Sets the margin */
+  margin-bottom: 2.4rem;
+}
+
+input,
+button,
+.button {
+  /* Sets the size of this page's buttons */
+  width: 100%;
+  height: 5rem;
+}

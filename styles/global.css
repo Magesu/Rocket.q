@@ -1,0 +1,141 @@
+* {
+  /* Resets elements */
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  /* Sets font size to 10px so rem calculation is easier */
+  font-size: 62.5%;
+
+  /* Colors */
+  --black: #0d114f;
+  --white: #fafafa;
+  --red: #e83f5b;
+  --light-blue: #e0ecff;
+  --blue: #3485ff;
+  --bg: #fbfcff;
+  --overlay: #040911;
+  --icons-and-details: #a5b0c1;
+
+  /* Grey */
+  --grey-dark: #4d5e77;
+  --grey-blue: #a1b2cd;
+  --grey-medium: #d3d9e2;
+  --grey-light: #e5eaf1;
+}
+
+body {
+  /* Sets body's height to the entire browser viewport and sets the background color */
+  height: 100vh;
+  background: var(--bg);
+}
+
+body,
+input,
+button,
+.button,
+textarea {
+  /* Sets the default text size for everything */
+  font-size: clamp(14px, 2vw, 1.6rem);
+}
+
+body,
+button,
+.button {
+  /* Sets Poppins as the font family for default text and button text */
+  font-family: 'Poppins', sans-serif;
+}
+
+input,
+textarea {
+  /* Sets Open Sans as the font family for text inputs */
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  /* Sets the default text size for h2 */
+  font-size: clamp(20px, 5vw, 2.8rem);
+}
+
+.content {
+  /* Sets the width of the content box to 100% the top and bottom margins to 0 and the lateral margins to auto */
+  width: 100%;
+  margin: 0 auto;
+}
+
+.scr-only {
+  /* Makes elements with this class hidden */
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  overflow: hidden;
+}
+
+input,
+button,
+.button {
+  /* Sets the padding and rounds the borders of text inputs and buttons */
+  padding: 0 1.6rem;
+  border-radius: 0.8rem;
+}
+
+input {
+  /* Makes text inputs have grey rounded borders */
+  border: 0.2rem solid var(--grey-blue);
+  margin-bottom: 1.8rem;
+}
+
+button,
+.button {
+  /* Centers the button text and gives bottom margins to buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+  /* Makes the blue buttons */
+  background: var(--blue);
+  color: var(--white);
+
+  /* Makes the transition from normal button to light button smooth */
+  transition: filter 0.2s;
+
+  /* Turns cursor into pointer when it's on a button */
+  cursor: pointer;
+}
+
+button.outlined,
+.button.outlined {
+  /* Makes the white buttons */
+  background: var(--white);
+  color: var(--blue);
+  border: 0.2rem solid var(--blue);
+}
+
+button > img,
+.button > img {
+  /* Gives space between the button icons and the text */
+  margin-right: 1rem;
+}
+
+button:hover,
+.button:hover {
+  filter: brightness(1.2);
+}
+
+.content header {
+  /* Defines the width of the header */
+  width: 80%;
+
+  /* Defines margins */
+  margin: 3.5rem auto;
+}
+
+.content header img {
+  /* Defines header logo's width */
+  width: 16.7rem;
+}
